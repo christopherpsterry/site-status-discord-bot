@@ -15,7 +15,8 @@ class host:
         fill = True
         x = {}
         try:
-            start = time.clock()
+            #start = time.clock()
+            start = time.perf_counter()
             r = requests.get(
                 self.host,
                 headers=user_agent.get_headers(),
@@ -23,7 +24,8 @@ class host:
                 timeout=data.probe_timeout,
                 allow_redirects=True
                 )
-            request_time = time.clock() - start
+            #request_time = time.clock() - start
+            request_time = time.perf_counter() - start
         except Exception as E:
             print(E)
             x['status'] = ":exclamation:Down"
