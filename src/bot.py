@@ -10,10 +10,10 @@ from client_hook import logging
 from host_check import host
 from create_embed import embed_content
 from create_alert import embed_alert
-from tkinter import messagebox
-import tkinter
-root = tkinter.Tk()
-root.withdraw()
+#from tkinter import messagebox
+#import tkinter
+#root = tkinter.Tk()
+#root.withdraw()
 class global_:
     max_interval = 4096
 pragma = True
@@ -167,7 +167,7 @@ Public Updates Server:
         sleep(data.interval_time)
             
 
-client.run(data.bot_token) 
+client.run(data.token) 
 
                 
                 
