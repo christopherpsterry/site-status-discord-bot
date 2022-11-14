@@ -18,7 +18,7 @@ class global_:
     max_interval = 4096
 pragma = True
 
-client=discord.Client()
+client=discord.Client(intents=discord.Intents.default())
 
 @client.event
 async def on_ready():
